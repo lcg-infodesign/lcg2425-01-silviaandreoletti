@@ -48,20 +48,20 @@ function draw() {
       let option = random(0, 1);
 
       // Disegno i lati del quadrato in base all'opzione generata
-      // Ci sono più linee perpendicolari che linee parallele 
-      if (option < 0.20) { // Lato sinistro e lato superiore
+      // Sequenza condizionale che decide quale tipo di linee tracciare in ogni quadrato della griglia in base al valore della variabile casuale option
+      if (option < 0.15) { // Lato sinistro e lato superiore
         line(xPos, yPos, xPos, yPos + lineLength); 
         line(xPos, yPos, xPos + lineLength, yPos); 
-      } else if (option < 0.40) { // Lato sinistro e lato inferiore
+      } else if (option < 0.30) { // Lato sinistro e lato inferiore
         line(xPos, yPos + squareSize, xPos, yPos + squareSize - lineLength); 
         line(xPos, yPos + squareSize, xPos + lineLength, yPos + squareSize); 
-      } else if (option < 0.60) { // Lato destro e lato superiore
+      } else if (option < 0.45) { // Lato destro e lato superiore
         line(xPos + squareSize, yPos, xPos + squareSize, yPos + lineLength); 
         line(xPos + squareSize - lineLength, yPos, xPos + squareSize, yPos); 
-      } else if (option < 0.80) { // Lato destro e lato inferiore
+      } else if (option < 0.60) { // Lato destro e lato inferiore
         line(xPos + squareSize, yPos + squareSize, xPos + squareSize, yPos + squareSize - lineLength); 
         line(xPos + squareSize - lineLength, yPos + squareSize, xPos + squareSize, yPos + squareSize); 
-      } else if (option < 0.90) { // Lato superiore e lato inferiore
+      } else if (option < 0.75) { // Lato superiore e lato inferiore
         line(xPos, yPos, xPos + squareSize, yPos);
         line(xPos, yPos + squareSize, xPos + squareSize, yPos + squareSize); 
       } else { // Lato sinistro e lato destro
