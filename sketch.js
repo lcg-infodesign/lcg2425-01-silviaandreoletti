@@ -18,7 +18,7 @@ function draw() {
   strokeWeight(3); 
 
   let lineLength = 38; 
-  let padding = 30; 
+  let padding = 25; 
   let distance = 12; // Spazio tra i quadrati (orizzontale e verticale)
   let squareSize = 38; 
   // Definisco altezza come somma della dimensione del quadrato e lo spazio verticale
