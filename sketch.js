@@ -15,12 +15,12 @@ function setup() {
 function draw() {
   background("white"); 
   stroke("black"); 
-  strokeWeight(3); 
+  strokeWeight(4); 
 
-  let lineLength = 38; 
+  let lineLength = 36; 
   let padding = 25; 
   let distance = 12; // Spazio tra i quadrati (orizzontale e verticale)
-  let squareSize = 38; 
+  let squareSize = 36; 
   // Definisco altezza come somma della dimensione del quadrato e lo spazio verticale
   let altezza = squareSize + distance;  
 
