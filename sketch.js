@@ -71,3 +71,9 @@ function draw() {
     }
   }
 }
+
+// Ridisegna automaticamente griglia quando finestra viene ridimensionata 
+function windowResized(){
+  resizeCanvas(windowWidth, windowHeight);
+  redraw() // Ridisegna la griglia senza richiedere il refresh manuale 
+}
