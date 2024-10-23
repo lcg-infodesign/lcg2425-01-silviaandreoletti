@@ -18,7 +18,7 @@ function draw() {
   strokeWeight(4); 
 
   let lineLength = 36; 
-  let distance = 12; // Spazio tra i quadrati (orizzontale e verticale)
+  let distance = 14; // Spazio tra i quadrati (orizzontale e verticale)
   let squareSize = 36; 
   let altezza = squareSize + distance;  
   let extraMargin = 10;
