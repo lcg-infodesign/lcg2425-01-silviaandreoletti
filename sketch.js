@@ -18,22 +18,22 @@ function draw() {
   strokeWeight(4); 
 
   let lineLength = 36; 
-  let padding = 25; 
   let distance = 12; // Spazio tra i quadrati (orizzontale e verticale)
   let squareSize = 36; 
-  // Definisco altezza come somma della dimensione del quadrato e lo spazio verticale
   let altezza = squareSize + distance;  
+  let extraMargin = 10;
 
   // Calcolo dinamico del numero di colonne e righe basato sulle dimensioni della finestra
-  let usableWidth = windowWidth - padding; 
-  let usableHeight = windowHeight - padding; // Altezza utilizzabile (padding inferiore escluso)
-  
-  let columns = Math.floor(usableWidth / (squareSize + distance)); 
-  let rows = Math.floor(usableHeight / altezza); 
+  let columns = Math.floor((windowWidth - extraMargin * 2) / (squareSize + distance));
+  let rows = Math.floor((windowHeight - extraMargin * 2) / altezza); 
 
-  // Posizione di inizio griglia considerando padding 
-  let startX = padding; 
-  let startY = padding;
+  // Calcola lo spazio "extra" per centrare la griglia
+  let extraWidth = windowWidth - columns * (squareSize + distance);
+  let extraHeight = windowHeight - rows * altezza;
+
+  // Offset per iniziare il disegno al centro, aggiungendo il margine extra 
+  let startX = extraWidth / 2 + extraMargin;
+  let startY = extraHeight / 2 + extraMargin;
 
   // Generare griglia di quadrati vuoti
   for (let i = 0; i < columns; i++) { 
@@ -41,8 +41,8 @@ function draw() {
       
       // xPos determina la posizione orizzontale di ciascun quadrato nella griglia
       // yPos determina la posizione verticale di ciascun quadrato
-      let xPos = startX + i * (squareSize + distance); 
-      let yPos = startY + j * altezza; 
+      let xPos = startX + i * (squareSize + distance);
+      let yPos = startY + j * altezza;
       
       // Genero numero decimale casuale tra 0 e 1 per decidere quali lati disegnare
       let option = random(0, 1);
