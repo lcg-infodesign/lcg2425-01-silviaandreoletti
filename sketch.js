@@ -16,13 +16,13 @@ function draw() {
 
   // Calcolo dinamico del numero di colonne e righe basato sulle dimensioni della finestra
   let columns = Math.floor((windowWidth - extraMargin * 2) / (squareSize + distance));
-  let rows = Math.floor((windowHeight - extraMargin * 2) / altezza); // Sottraggo il margine in basso
+  let rows = Math.floor((windowHeight - extraMargin * 2) / altezza); 
 
-  // Calcola lo spazio "extra" per centrare la griglia
+  // Calcola lo spazio extra per centrare la griglia
   let extraWidth = windowWidth - columns * (squareSize + distance);
-  let extraHeight = windowHeight - rows * altezza; // Sottraggo il margine in basso
+  let extraHeight = windowHeight - rows * altezza; 
 
-  // Offset per iniziare il disegno al centro, aggiungendo il margine extra 
+  // Offset per iniziare il disegno al centro aggiungendo il margine extra 
   let startX = extraWidth / 2 + extraMargin;
   let startY = extraHeight / 2 + extraMargin;
 
