@@ -1,12 +1,6 @@
-function preload() {
-  // put preload code here
-}
-
 function setup() {
   createCanvas(windowWidth, windowHeight);
   noLoop(); 
-  textAlign(CENTER, CENTER);
-  textSize(16);
 }
 
 function draw() {
@@ -19,15 +13,14 @@ function draw() {
   let squareSize = 36; 
   let altezza = squareSize + distance;  
   let extraMargin = 10;
-  let bottomMargin = 100;
 
   // Calcolo dinamico del numero di colonne e righe basato sulle dimensioni della finestra
   let columns = Math.floor((windowWidth - extraMargin * 2) / (squareSize + distance));
-  let rows = Math.floor((windowHeight - extraMargin * 2 - bottomMargin) / altezza); // Sottraggo il margine in basso
+  let rows = Math.floor((windowHeight - extraMargin * 2) / altezza); // Sottraggo il margine in basso
 
   // Calcola lo spazio "extra" per centrare la griglia
   let extraWidth = windowWidth - columns * (squareSize + distance);
-  let extraHeight = windowHeight - rows * altezza - bottomMargin; // Sottraggo il margine in basso
+  let extraHeight = windowHeight - rows * altezza; // Sottraggo il margine in basso
 
   // Offset per iniziare il disegno al centro, aggiungendo il margine extra 
   let startX = extraWidth / 2 + extraMargin;
@@ -68,16 +61,6 @@ function draw() {
       }
     }
   }
-
-  // Testo 
-  fill ("black");
-  noStroke();
-
-  const message =
-    "This is a template repository\nfor the course Laboratorio di Computergrafica\nCommunication Design, Politecnico di Milano";
-
-    // Messaggio deve essere centrale in larghezza e con margine in basso
-    text(message, width / 2, height - (bottomMargin / 2)); 
 }
 
 // Ridisegna automaticamente griglia quando finestra viene ridimensionata 
